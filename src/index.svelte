@@ -6,18 +6,20 @@ $: tempF = Math.round (tempC * 1.8 + 32)
 
 <h1>Hot Chocolate</h1>
 
-<label>
-Name: 
-<input type= "text" bind:value={name}>
+<section class= "section">
+
+<label class= "label"> 
+    Name: 
+    <input class= "input" type= "text" bind:value={name}>
 </label>
 
-<label>
+<label class= "label">
 Drink temperature 
-<input type="range" min= "0" max= "100" bind:value={tempC} >
+<input class= "input" type="range" min= "0" max= "100" bind:value={tempC} >
 </label>
 
 {#if name.length >0}
-    <p> Hi {name}, your drink is {tempC} degrees ({tempF} degrees Fahrenheight).</p>
+    <p> Hi {name}, your drink is {tempC}°C ({tempF}°F).</p>
 
 
     {#if tempC < 40}
@@ -29,3 +31,4 @@ Drink temperature
     {/if}
 
 {/if}
+</section>
